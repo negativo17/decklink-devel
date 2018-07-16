@@ -1,5 +1,5 @@
 Name:           decklink-devel
-Version:        10.9.10
+Version:        10.11
 Release:        1%{?dist}
 Summary:        Blackmagic Design DeckLink SDK
 License:        Proprietary
@@ -39,6 +39,9 @@ install -p -m 644 Linux/include/* %{buildroot}%{_includedir}
 %doc Examples/
 
 %changelog
+* Mon Jul 16 2018 Simone Caronni <negativo17@gmail.com> - 10.11-1
+- Update to 10.11.
+
 * Fri Feb 02 2018 Simone Caronni <negativo17@gmail.com> - 10.9.10-1
 - First build.
 - 
