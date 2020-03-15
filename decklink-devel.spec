@@ -1,5 +1,5 @@
 Name:           decklink-devel
-Version:        10.11
+Version:        11.4
 Release:        1%{?dist}
 Summary:        Blackmagic Design DeckLink SDK
 License:        Proprietary
@@ -32,13 +32,16 @@ mkdir -p %{buildroot}%{_includedir}
 install -p -m 644 Linux/include/* %{buildroot}%{_includedir}
 
 %files
-%doc ReadMe.rtf "Blackmagic Decklink SDK.pdf"
+%doc ReadMe.rtf "Blackmagic DeckLink SDK.pdf"
 %{_includedir}/*
 
 %files samples
 %doc Examples/
 
 %changelog
+* Sun Mar 15 2020 Simone Caronni <negativo17@gmail.com> - 11.4-1
+- Update to 11.4.
+
 * Mon Jul 16 2018 Simone Caronni <negativo17@gmail.com> - 10.11-1
 - Update to 10.11.
 
