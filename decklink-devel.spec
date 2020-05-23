@@ -1,5 +1,5 @@
 Name:           decklink-devel
-Version:        11.4
+Version:        11.5.1
 Release:        1%{?dist}
 Summary:        Blackmagic Design DeckLink SDK
 License:        Proprietary
@@ -23,8 +23,11 @@ DeckLink SDK.
 %prep
 %autosetup -c -T -a 0
 mv "Blackmagic DeckLink SDK %{version}"/{Examples,Linux,*.*} .
-rm -fr Examples/Mac Examples/Win \
-    Examples/Examples.sln Examples/Examples.xcodeproj \
+rm -fr \
+    Examples/Mac \
+    Examples/Win \
+    Examples/Examples.sln \
+    Examples/Examples.xcodeproj \
     Examples/Linux/bin
 
 %install
@@ -39,6 +42,9 @@ install -p -m 644 Linux/include/* %{buildroot}%{_includedir}
 %doc Examples/
 
 %changelog
+* Sat May 23 2020 Simone Caronni <negativo17@gmail.com> - 11.5.1-1
+- Update to 11.5.1.
+
 * Sun Mar 15 2020 Simone Caronni <negativo17@gmail.com> - 11.4-1
 - Update to 11.4.
 
