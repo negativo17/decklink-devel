@@ -22,8 +22,11 @@ DeckLink SDK.
 
 %prep
 %autosetup -c
-rm -fr Blackmagic\ DeckLink\ SDK\ %{version}/{Mac,Win,Examples/Mac,Examples/Win}
-rm -fr Blackmagic\ DeckLink\ SDK\ %{version}/Linux/Samples/bin
+mv Blackmagic\ DeckLink\ SDK\ %{version}/* .
+rm -fr Blackmagic\ DeckLink\ SDK\ %{version}
+
+rm -fr Mac Win Examples/Mac Examples/Win
+rm -fr Examples/Linux/bin Linux/Samples/bin
 
 %install
 mkdir -p %{buildroot}%{_includedir}
