@@ -1,5 +1,5 @@
 Name:           decklink-devel
-Version:        12.0
+Version:        12.2.2
 Release:        1%{?dist}
 Summary:        Blackmagic Design DeckLink SDK
 License:        End User License Agreement for the Software Development Kit
@@ -38,6 +38,9 @@ install -p -m 0644 Linux/include/* %{buildroot}%{_includedir}
 %doc Examples/
 
 %changelog
+* Fri Mar 11 2022 Simone Caronni <negativo17@gmail.com> - 12.2.2-1
+- Update to 12.2.2.
+
 * Thu Mar 25 2021 Simone Caronni <negativo17@gmail.com> - 12.0-1
 - Update to 12.0.
 
