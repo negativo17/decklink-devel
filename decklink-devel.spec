@@ -1,12 +1,14 @@
 Name:           decklink-devel
-Version:        14.4
+Epoch:          1
+Version:        12.9
 Release:        1%{?dist}
 Summary:        Blackmagic Design DeckLink SDK
 License:        End User License Agreement for the Software Development Kit
 URL:            https://www.blackmagicdesign.com/
 BuildArch:      noarch
 
-Source0:        Blackmagic_DeckLink_SDK_%{version}.zip
+# https://www.blackmagicdesign.com/developer/products/capture-and-playback/sdk-and-software
+Source0:        Blackmagic_DeckLink_SDK_12.9.zip
 
 %description
 This SDK provides developer support for Desktop Video that allows updating
@@ -41,6 +43,9 @@ install -p -m 0644 Linux/include/* %{buildroot}%{_includedir}
 %doc Examples/
 
 %changelog
+* Tue Sep 16 2025 Simone Caronni <negativo17@gmail.com> - 1:12.9-1
+- Revert to 12.9.
+
 * Thu Mar 13 2025 Simone Caronni <negativo17@gmail.com> - 14.4-1
 - Update to 14.4.
 
